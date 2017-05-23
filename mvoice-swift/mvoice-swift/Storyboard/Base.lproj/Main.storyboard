@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12113" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yTt-Fz-yt6">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12078"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="mvoice_swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIP-DA-9EZ">
+                                <rect key="frame" x="137" y="360" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.49803921568627452" green="0.67450980392156867" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="eAK-ay-quP"/>
+                                    <constraint firstAttribute="height" constant="100" id="u5R-qo-MK9"/>
+                                </constraints>
+                                <state key="normal" image="play"/>
+                                <connections>
+                                    <action selector="playAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CUo-wg-6Qo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ma2-Hh-Xli">
+                                <rect key="frame" x="137" y="502" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.31764705882352939" green="0.83921568627450982" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="RVx-tQ-baf"/>
+                                    <constraint firstAttribute="width" constant="100" id="W4X-XC-wjV"/>
+                                </constraints>
+                                <state key="normal" image="chat_voice_microphone"/>
+                                <connections>
+                                    <action selector="cancelRecording:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="O0o-Ba-ot6"/>
+                                    <action selector="dragOutsideToCancelRecording:" destination="BYZ-38-t0r" eventType="touchDragOutside" id="E98-ls-dQ3"/>
+                                    <action selector="finishRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AFJ-n2-Ui4"/>
+                                    <action selector="startRecording:" destination="BYZ-38-t0r" eventType="touchDown" id="hnr-tY-TSf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cIP-DA-9EZ" firstAttribute="centerX" secondItem="Ma2-Hh-Xli" secondAttribute="centerX" id="EzY-Mi-Znr"/>
+                            <constraint firstItem="Ma2-Hh-Xli" firstAttribute="top" secondItem="cIP-DA-9EZ" secondAttribute="bottom" constant="42" id="HPX-4c-lYm"/>
+                            <constraint firstItem="Ma2-Hh-Xli" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ILP-gK-l7M"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ma2-Hh-Xli" secondAttribute="bottom" constant="65" id="e08-vc-JRk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Id9-Pb-LV3">
+                        <barButtonItem key="rightBarButtonItem" image="wave_list" id="nyb-sg-GiO">
+                            <connections>
+                                <segue destination="DmP-7C-GRZ" kind="push" id="m9U-EJ-IJc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="playButton" destination="cIP-DA-9EZ" id="77Y-Cx-eFa"/>
+                        <outlet property="playButtonBottomLayoutConstraint" destination="HPX-4c-lYm" id="lDr-9e-i42"/>
+                        <outlet property="recordButton" destination="Ma2-Hh-Xli" id="cfv-DA-eyv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="727" y="168"/>
+        </scene>
+        <!--Audio List Table View Controller-->
+        <scene sceneID="zCt-Hv-yQT">
+            <objects>
+                <tableViewController id="DmP-7C-GRZ" customClass="AudioListTableViewController" customModule="mvoice_swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="z5j-xn-Nql">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="bR6-PG-xuL">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bR6-PG-xuL" id="FcV-is-pDs">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="DmP-7C-GRZ" id="kyb-QH-fKp"/>
+                            <outlet property="delegate" destination="DmP-7C-GRZ" id="Pv7-kI-Xcq"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="wZ3-kQ-V48"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xki-QD-zQD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1577" y="168"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="O1W-cx-5ti">
+            <objects>
+                <navigationController id="yTt-Fz-yt6" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ddc-in-1dU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="u9x-Ea-nCE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="18k-e1-adx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28" y="168"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chat_voice_microphone" width="27" height="81"/>
+        <image name="play" width="80" height="80"/>
+        <image name="wave_list" width="40" height="40"/>
+    </resources>
+</document>
