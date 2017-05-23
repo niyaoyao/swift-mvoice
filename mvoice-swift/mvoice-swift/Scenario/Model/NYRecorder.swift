@@ -11,7 +11,7 @@ import UIKit
 import Foundation
 import AVFoundation
 
-final class NYRecorder: NSObject, AVAudioRecorderDelegate {
+final class NYRecorder: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
     // Can't init is singleton
     private override init() {
         super.init()
@@ -26,6 +26,7 @@ final class NYRecorder: NSObject, AVAudioRecorderDelegate {
     var audioPlayer: AVAudioPlayer!
     var duration:Int64 = 0
     var recorderSettins:[String : Int]!
+    var filePathURL: URL!
     
     // MARK: Setup
     public func setupRecorder() {
@@ -44,9 +45,9 @@ final class NYRecorder: NSObject, AVAudioRecorderDelegate {
             audioSession.requestRecordPermission({ (granted: Bool) in
                 DispatchQueue.main.async {
                     if granted {
-                        print("true" + "\n") // clousure
+                        print("granted ok" + "\n") // clousure
                     } else {
-                        print("false" + "\n")
+                        print("granted false" + "\n")
                     }
                 }
             })
@@ -64,6 +65,7 @@ final class NYRecorder: NSObject, AVAudioRecorderDelegate {
             try audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
             try audioSession.setActive(true)
             try audioRecorder = AVAudioRecorder(url: fileURL, settings: recorderSettins)
+            filePathURL = fileURL
             audioRecorder.isMeteringEnabled = true
             audioRecorder.delegate = self
             
@@ -102,9 +104,27 @@ final class NYRecorder: NSObject, AVAudioRecorderDelegate {
     }
     
     // MARK: Player
+    public func startPlayLastAudio() {
+        startPlay(url: filePathURL)
+    }
+    
+    public func startPlay(url: URL) {
+        do {
+            try audioPlayer = AVAudioPlayer(contentsOf: url)
+            audioPlayer.delegate = self
+            audioPlayer.prepareToPlay()
+            if !audioPlayer.isPlaying {
+                audioPlayer.play()
+            }
+        } catch  {
+            print(error)
+        }
+    }
+    
     public func startPlayer(data: Data) {
         do {
             try audioPlayer = AVAudioPlayer(data: data)
+            audioPlayer.delegate = self
             if !audioPlayer.isPlaying {
                 audioPlayer.play()
             }
@@ -123,6 +143,11 @@ final class NYRecorder: NSObject, AVAudioRecorderDelegate {
         if audioPlayer.isPlaying {
             audioPlayer.stop()
         }
+    }
+    
+    // MARK: AVAudioPlayerDelegate
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        
     }
     
 }

@@ -15,6 +15,11 @@ class AudioListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         audioDatas = [Data(),Data()]
+        setupUI()
+    }
+    
+    func setupUI() {
+        navigationItem.title = "i·Listen"
     }
 
     // MARK: - Table view data source

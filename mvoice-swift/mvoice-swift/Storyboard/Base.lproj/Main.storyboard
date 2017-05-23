@@ -21,12 +21,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIP-DA-9EZ">
+                                <rect key="frame" x="137" y="360" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.49803921568627452" green="0.67450980392156867" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="eAK-ay-quP"/>
+                                    <constraint firstAttribute="height" constant="100" id="u5R-qo-MK9"/>
+                                </constraints>
+                                <state key="normal" image="play"/>
+                                <connections>
+                                    <action selector="playAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CUo-wg-6Qo"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ma2-Hh-Xli">
-                                <rect key="frame" x="137" y="467" width="100" height="100"/>
+                                <rect key="frame" x="137" y="502" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.31764705882352939" green="0.83921568627450982" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="8O1-0p-dyc"/>
-                                    <constraint firstAttribute="width" constant="100" id="LXt-Fz-Yvm"/>
+                                    <constraint firstAttribute="height" constant="100" id="RVx-tQ-baf"/>
+                                    <constraint firstAttribute="width" constant="100" id="W4X-XC-wjV"/>
                                 </constraints>
                                 <state key="normal" image="chat_voice_microphone"/>
                                 <connections>
@@ -39,18 +51,22 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Ma2-Hh-Xli" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="66M-Vo-dop"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ma2-Hh-Xli" secondAttribute="bottom" constant="100" id="RtY-ZK-Tk4"/>
+                            <constraint firstItem="cIP-DA-9EZ" firstAttribute="centerX" secondItem="Ma2-Hh-Xli" secondAttribute="centerX" id="EzY-Mi-Znr"/>
+                            <constraint firstItem="Ma2-Hh-Xli" firstAttribute="top" secondItem="cIP-DA-9EZ" secondAttribute="bottom" constant="42" id="HPX-4c-lYm"/>
+                            <constraint firstItem="Ma2-Hh-Xli" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ILP-gK-l7M"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ma2-Hh-Xli" secondAttribute="bottom" constant="65" id="e08-vc-JRk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Id9-Pb-LV3">
-                        <barButtonItem key="rightBarButtonItem" image="nav_message_menu" id="nyb-sg-GiO">
+                        <barButtonItem key="rightBarButtonItem" image="wave_list" id="nyb-sg-GiO">
                             <connections>
                                 <segue destination="DmP-7C-GRZ" kind="push" id="m9U-EJ-IJc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="playButton" destination="cIP-DA-9EZ" id="77Y-Cx-eFa"/>
+                        <outlet property="playButtonBottomLayoutConstraint" destination="HPX-4c-lYm" id="lDr-9e-i42"/>
                         <outlet property="recordButton" destination="Ma2-Hh-Xli" id="cfv-DA-eyv"/>
                     </connections>
                 </viewController>
@@ -62,13 +78,13 @@
         <scene sceneID="zCt-Hv-yQT">
             <objects>
                 <tableViewController id="DmP-7C-GRZ" customClass="AudioListTableViewController" customModule="mvoice_swift" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="z5j-xn-Nql">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="z5j-xn-Nql">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="bR6-PG-xuL">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="bR6-PG-xuL">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bR6-PG-xuL" id="FcV-is-pDs">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -106,6 +122,7 @@
     </scenes>
     <resources>
         <image name="chat_voice_microphone" width="27" height="81"/>
-        <image name="nav_message_menu" width="44" height="44"/>
+        <image name="play" width="80" height="80"/>
+        <image name="wave_list" width="40" height="40"/>
     </resources>
 </document>

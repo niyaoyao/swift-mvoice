@@ -51,8 +51,8 @@ extension AppDelegate {
         navigationBar.tintColor = tintColor
         navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:tintColor]
         navigationBar.isTranslucent = false
-        navigationBar.setBackgroundImage(UIImage.unitImageForColor(color: UIColor.alphaValue(hex: 0xffffff, alpha: 0.8)),
-                                         for: UIBarMetrics.default)
+        navigationBar.setBackgroundImage(UIImage.unitImageForColor(color: UIColor.alphaValue(hex: 0xffffff, alpha: 0.8)), for: UIBarMetrics.default)
+        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffsetMake(0.0, -60.0), for: UIBarMetrics.default)
     }
     
     private func setupWindowAppearance() {
