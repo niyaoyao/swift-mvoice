@@ -15,6 +15,10 @@
 		0E6C99B71ED357A700843ABB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C99AE1ED357A600843ABB /* ViewController.swift */; };
 		0E6C99B81ED357A700843ABB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E6C99B01ED357A600843ABB /* LaunchScreen.storyboard */; };
 		0E6C99B91ED357A700843ABB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E6C99B21ED357A600843ABB /* Main.storyboard */; };
+		0E6C99C81ED3DCF000843ABB /* AppDelegateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C99C41ED3DCF000843ABB /* AppDelegateExtension.swift */; };
+		0E6C99C91ED3DCF000843ABB /* NYColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C99C51ED3DCF000843ABB /* NYColor.swift */; };
+		0E6C99CA1ED3DCF000843ABB /* NYDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C99C61ED3DCF000843ABB /* NYDevice.swift */; };
+		0E6C99CB1ED3DCF000843ABB /* NYImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C99C71ED3DCF000843ABB /* NYImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,10 @@
 		0E6C99AE1ED357A600843ABB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0E6C99B11ED357A600843ABB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E6C99B31ED357A600843ABB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0E6C99C41ED3DCF000843ABB /* AppDelegateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateExtension.swift; sourceTree = "<group>"; };
+		0E6C99C51ED3DCF000843ABB /* NYColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NYColor.swift; sourceTree = "<group>"; };
+		0E6C99C61ED3DCF000843ABB /* NYDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NYDevice.swift; sourceTree = "<group>"; };
+		0E6C99C71ED3DCF000843ABB /* NYImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NYImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +136,7 @@
 		0E6C99A71ED357A600843ABB /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				0E6C99C31ED3DCF000843ABB /* Swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -164,6 +173,17 @@
 				0E6C99B21ED357A600843ABB /* Main.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		0E6C99C31ED3DCF000843ABB /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				0E6C99C41ED3DCF000843ABB /* AppDelegateExtension.swift */,
+				0E6C99C51ED3DCF000843ABB /* NYColor.swift */,
+				0E6C99C61ED3DCF000843ABB /* NYDevice.swift */,
+				0E6C99C71ED3DCF000843ABB /* NYImage.swift */,
+			);
+			path = Swift;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,7 +324,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E6C99CA1ED3DCF000843ABB /* NYDevice.swift in Sources */,
 				0E6C99B71ED357A700843ABB /* ViewController.swift in Sources */,
+				0E6C99CB1ED3DCF000843ABB /* NYImage.swift in Sources */,
+				0E6C99C81ED3DCF000843ABB /* AppDelegateExtension.swift in Sources */,
+				0E6C99C91ED3DCF000843ABB /* NYColor.swift in Sources */,
 				0E6C99B41ED357A600843ABB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
