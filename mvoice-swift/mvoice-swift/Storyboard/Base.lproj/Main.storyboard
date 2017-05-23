@@ -29,6 +29,12 @@
                                     <constraint firstAttribute="width" constant="100" id="LXt-Fz-Yvm"/>
                                 </constraints>
                                 <state key="normal" image="chat_voice_microphone"/>
+                                <connections>
+                                    <action selector="cancelRecording:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="O0o-Ba-ot6"/>
+                                    <action selector="dragOutsideToCancelRecording:" destination="BYZ-38-t0r" eventType="touchDragOutside" id="E98-ls-dQ3"/>
+                                    <action selector="finishRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AFJ-n2-Ui4"/>
+                                    <action selector="startRecording:" destination="BYZ-38-t0r" eventType="touchDown" id="hnr-tY-TSf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -37,14 +43,49 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ma2-Hh-Xli" secondAttribute="bottom" constant="100" id="RtY-ZK-Tk4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Id9-Pb-LV3"/>
+                    <navigationItem key="navigationItem" id="Id9-Pb-LV3">
+                        <barButtonItem key="rightBarButtonItem" image="nav_message_menu" id="nyb-sg-GiO">
+                            <connections>
+                                <segue destination="DmP-7C-GRZ" kind="push" id="m9U-EJ-IJc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="recordButton" destination="Ma2-Hh-Xli" id="s5Z-87-nfG"/>
+                        <outlet property="recordButton" destination="Ma2-Hh-Xli" id="cfv-DA-eyv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="727" y="168"/>
+        </scene>
+        <!--Audio List Table View Controller-->
+        <scene sceneID="zCt-Hv-yQT">
+            <objects>
+                <tableViewController id="DmP-7C-GRZ" customClass="AudioListTableViewController" customModule="mvoice_swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="z5j-xn-Nql">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="bR6-PG-xuL">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bR6-PG-xuL" id="FcV-is-pDs">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="DmP-7C-GRZ" id="kyb-QH-fKp"/>
+                            <outlet property="delegate" destination="DmP-7C-GRZ" id="Pv7-kI-Xcq"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="wZ3-kQ-V48"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xki-QD-zQD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1577" y="168"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="O1W-cx-5ti">
@@ -65,5 +106,6 @@
     </scenes>
     <resources>
         <image name="chat_voice_microphone" width="27" height="81"/>
+        <image name="nav_message_menu" width="44" height="44"/>
     </resources>
 </document>
