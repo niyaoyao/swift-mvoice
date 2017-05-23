@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E29CD181ECF52BA004671F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E29CD171ECF52BA004671F8 /* AppDelegate.swift */; };
-		0E29CD1A1ECF52BA004671F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E29CD191ECF52BA004671F8 /* ViewController.swift */; };
-		0E29CD1D1ECF52BA004671F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E29CD1B1ECF52BA004671F8 /* Main.storyboard */; };
-		0E29CD1F1ECF52BA004671F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E29CD1E1ECF52BA004671F8 /* Assets.xcassets */; };
-		0E29CD221ECF52BA004671F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E29CD201ECF52BA004671F8 /* LaunchScreen.storyboard */; };
 		0E29CD2D1ECF52BA004671F8 /* mvoice_swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E29CD2C1ECF52BA004671F8 /* mvoice_swiftTests.swift */; };
 		0E29CD381ECF52BA004671F8 /* mvoice_swiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E29CD371ECF52BA004671F8 /* mvoice_swiftUITests.swift */; };
+		0E6C99B41ED357A600843ABB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C99A91ED357A600843ABB /* AppDelegate.swift */; };
+		0E6C99B51ED357A700843ABB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E6C99AA1ED357A600843ABB /* Info.plist */; };
+		0E6C99B61ED357A700843ABB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E6C99AC1ED357A600843ABB /* Assets.xcassets */; };
+		0E6C99B71ED357A700843ABB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C99AE1ED357A600843ABB /* ViewController.swift */; };
+		0E6C99B81ED357A700843ABB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E6C99B01ED357A600843ABB /* LaunchScreen.storyboard */; };
+		0E6C99B91ED357A700843ABB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E6C99B21ED357A600843ABB /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,18 +36,18 @@
 
 /* Begin PBXFileReference section */
 		0E29CD141ECF52BA004671F8 /* mvoice-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mvoice-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0E29CD171ECF52BA004671F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0E29CD191ECF52BA004671F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0E29CD1C1ECF52BA004671F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0E29CD1E1ECF52BA004671F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0E29CD211ECF52BA004671F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		0E29CD231ECF52BA004671F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E29CD281ECF52BA004671F8 /* mvoice-swiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mvoice-swiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E29CD2C1ECF52BA004671F8 /* mvoice_swiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mvoice_swiftTests.swift; sourceTree = "<group>"; };
 		0E29CD2E1ECF52BA004671F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E29CD331ECF52BA004671F8 /* mvoice-swiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mvoice-swiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E29CD371ECF52BA004671F8 /* mvoice_swiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mvoice_swiftUITests.swift; sourceTree = "<group>"; };
 		0E29CD391ECF52BA004671F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E6C99A91ED357A600843ABB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0E6C99AA1ED357A600843ABB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E6C99AC1ED357A600843ABB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0E6C99AE1ED357A600843ABB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0E6C99B11ED357A600843ABB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0E6C99B31ED357A600843ABB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +98,11 @@
 		0E29CD161ECF52BA004671F8 /* mvoice-swift */ = {
 			isa = PBXGroup;
 			children = (
-				0E29CD171ECF52BA004671F8 /* AppDelegate.swift */,
-				0E29CD191ECF52BA004671F8 /* ViewController.swift */,
-				0E29CD1B1ECF52BA004671F8 /* Main.storyboard */,
-				0E29CD1E1ECF52BA004671F8 /* Assets.xcassets */,
-				0E29CD201ECF52BA004671F8 /* LaunchScreen.storyboard */,
-				0E29CD231ECF52BA004671F8 /* Info.plist */,
+				0E6C99A71ED357A600843ABB /* Common */,
+				0E6C99A81ED357A600843ABB /* Main */,
+				0E6C99AB1ED357A600843ABB /* Resource */,
+				0E6C99AD1ED357A600843ABB /* Scenario */,
+				0E6C99AF1ED357A600843ABB /* Storyboard */,
 			);
 			path = "mvoice-swift";
 			sourceTree = "<group>";
@@ -123,6 +123,47 @@
 				0E29CD391ECF52BA004671F8 /* Info.plist */,
 			);
 			path = "mvoice-swiftUITests";
+			sourceTree = "<group>";
+		};
+		0E6C99A71ED357A600843ABB /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		0E6C99A81ED357A600843ABB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				0E6C99A91ED357A600843ABB /* AppDelegate.swift */,
+				0E6C99AA1ED357A600843ABB /* Info.plist */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		0E6C99AB1ED357A600843ABB /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				0E6C99AC1ED357A600843ABB /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		0E6C99AD1ED357A600843ABB /* Scenario */ = {
+			isa = PBXGroup;
+			children = (
+				0E6C99AE1ED357A600843ABB /* ViewController.swift */,
+			);
+			path = Scenario;
+			sourceTree = "<group>";
+		};
+		0E6C99AF1ED357A600843ABB /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				0E6C99B01ED357A600843ABB /* LaunchScreen.storyboard */,
+				0E6C99B21ED357A600843ABB /* Main.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,9 +276,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E29CD221ECF52BA004671F8 /* LaunchScreen.storyboard in Resources */,
-				0E29CD1F1ECF52BA004671F8 /* Assets.xcassets in Resources */,
-				0E29CD1D1ECF52BA004671F8 /* Main.storyboard in Resources */,
+				0E6C99B81ED357A700843ABB /* LaunchScreen.storyboard in Resources */,
+				0E6C99B61ED357A700843ABB /* Assets.xcassets in Resources */,
+				0E6C99B51ED357A700843ABB /* Info.plist in Resources */,
+				0E6C99B91ED357A700843ABB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,8 +304,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E29CD1A1ECF52BA004671F8 /* ViewController.swift in Sources */,
-				0E29CD181ECF52BA004671F8 /* AppDelegate.swift in Sources */,
+				0E6C99B71ED357A700843ABB /* ViewController.swift in Sources */,
+				0E6C99B41ED357A600843ABB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,20 +341,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0E29CD1B1ECF52BA004671F8 /* Main.storyboard */ = {
+		0E6C99B01ED357A600843ABB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0E29CD1C1ECF52BA004671F8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		0E29CD201ECF52BA004671F8 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0E29CD211ECF52BA004671F8 /* Base */,
+				0E6C99B11ED357A600843ABB /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		0E6C99B21ED357A600843ABB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0E6C99B31ED357A600843ABB /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -418,7 +460,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P66P3CXU58;
-				INFOPLIST_FILE = "mvoice-swift/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/mvoice-swift/Main/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "that.boring.bear.mvoice-swift";
@@ -426,6 +468,7 @@
 				PROVISIONING_PROFILE = "5c815b63-c2a3-4a33-a660-e7efc3c978b9";
 				PROVISIONING_PROFILE_SPECIFIER = wild_that_boring_bear_provinsioning_profile;
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -434,7 +477,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P66P3CXU58;
-				INFOPLIST_FILE = "mvoice-swift/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/mvoice-swift/Main/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "that.boring.bear.mvoice-swift";
@@ -442,6 +485,7 @@
 				PROVISIONING_PROFILE = "5c815b63-c2a3-4a33-a660-e7efc3c978b9";
 				PROVISIONING_PROFILE_SPECIFIER = wild_that_boring_bear_provinsioning_profile;
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -522,6 +566,7 @@
 				0E29CD3E1ECF52BA004671F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0E29CD3F1ECF52BA004671F8 /* Build configuration list for PBXNativeTarget "mvoice-swiftTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +575,7 @@
 				0E29CD411ECF52BA004671F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0E29CD421ECF52BA004671F8 /* Build configuration list for PBXNativeTarget "mvoice-swiftUITests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +584,7 @@
 				0E29CD441ECF52BA004671F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
