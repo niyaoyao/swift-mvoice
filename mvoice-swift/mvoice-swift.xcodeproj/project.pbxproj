@@ -10,9 +10,7 @@
 		0E29CD2D1ECF52BA004671F8 /* mvoice_swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E29CD2C1ECF52BA004671F8 /* mvoice_swiftTests.swift */; };
 		0E29CD381ECF52BA004671F8 /* mvoice_swiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E29CD371ECF52BA004671F8 /* mvoice_swiftUITests.swift */; };
 		0E64E6E81ED465670003552D /* AudioListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E64E6E71ED465670003552D /* AudioListTableViewController.swift */; };
-		0E64E6EA1ED466330003552D /* AudioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E64E6E91ED466330003552D /* AudioViewModel.swift */; };
 		0E6C99B41ED357A600843ABB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C99A91ED357A600843ABB /* AppDelegate.swift */; };
-		0E6C99B51ED357A700843ABB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E6C99AA1ED357A600843ABB /* Info.plist */; };
 		0E6C99B61ED357A700843ABB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E6C99AC1ED357A600843ABB /* Assets.xcassets */; };
 		0E6C99B81ED357A700843ABB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E6C99B01ED357A600843ABB /* LaunchScreen.storyboard */; };
 		0E6C99B91ED357A700843ABB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E6C99B21ED357A600843ABB /* Main.storyboard */; };
@@ -24,6 +22,7 @@
 		0E6C99D71ED3E4D700843ABB /* NYRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C99D61ED3E4D700843ABB /* NYRecorder.swift */; };
 		0E6C99DB1ED3EA8B00843ABB /* NYFileSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C99DA1ED3EA8B00843ABB /* NYFileSupport.swift */; };
 		0E6C99DD1ED437AC00843ABB /* NYDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C99DC1ED437AC00843ABB /* NYDate.swift */; };
+		0EBFD4781ED54A71002C7B74 /* AudioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBFD4771ED54A71002C7B74 /* AudioViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +51,6 @@
 		0E29CD371ECF52BA004671F8 /* mvoice_swiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mvoice_swiftUITests.swift; sourceTree = "<group>"; };
 		0E29CD391ECF52BA004671F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E64E6E71ED465670003552D /* AudioListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioListTableViewController.swift; sourceTree = "<group>"; };
-		0E64E6E91ED466330003552D /* AudioViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioViewModel.swift; sourceTree = "<group>"; };
 		0E6C99A91ED357A600843ABB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E6C99AA1ED357A600843ABB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E6C99AC1ED357A600843ABB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,6 +64,7 @@
 		0E6C99D61ED3E4D700843ABB /* NYRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NYRecorder.swift; sourceTree = "<group>"; };
 		0E6C99DA1ED3EA8B00843ABB /* NYFileSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NYFileSupport.swift; sourceTree = "<group>"; };
 		0E6C99DC1ED437AC00843ABB /* NYDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NYDate.swift; sourceTree = "<group>"; };
+		0EBFD4771ED54A71002C7B74 /* AudioViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,7 +204,6 @@
 			isa = PBXGroup;
 			children = (
 				0E6C99D61ED3E4D700843ABB /* NYRecorder.swift */,
-				0E64E6E91ED466330003552D /* AudioViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -229,6 +227,7 @@
 		0E6C99D01ED3E33700843ABB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0EBFD4771ED54A71002C7B74 /* AudioViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -345,7 +344,6 @@
 			files = (
 				0E6C99B81ED357A700843ABB /* LaunchScreen.storyboard in Resources */,
 				0E6C99B61ED357A700843ABB /* Assets.xcassets in Resources */,
-				0E6C99B51ED357A700843ABB /* Info.plist in Resources */,
 				0E6C99B91ED357A700843ABB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,7 +373,7 @@
 				0E6C99D11ED3E33700843ABB /* ViewController.swift in Sources */,
 				0E6C99CA1ED3DCF000843ABB /* NYDevice.swift in Sources */,
 				0E6C99DB1ED3EA8B00843ABB /* NYFileSupport.swift in Sources */,
-				0E64E6EA1ED466330003552D /* AudioViewModel.swift in Sources */,
+				0EBFD4781ED54A71002C7B74 /* AudioViewModel.swift in Sources */,
 				0E6C99DD1ED437AC00843ABB /* NYDate.swift in Sources */,
 				0E6C99CB1ED3DCF000843ABB /* NYImage.swift in Sources */,
 				0E6C99D71ED3E4D700843ABB /* NYRecorder.swift in Sources */,

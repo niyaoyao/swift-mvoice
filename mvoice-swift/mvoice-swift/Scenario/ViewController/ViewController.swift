@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var playButtonBottomLayoutConstraint: NSLayoutConstraint!
+   
+    // timer label
     
     var isPlaying:Bool = false
     

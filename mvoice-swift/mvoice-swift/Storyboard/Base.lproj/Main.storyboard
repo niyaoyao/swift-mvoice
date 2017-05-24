@@ -60,7 +60,7 @@
                     <navigationItem key="navigationItem" id="Id9-Pb-LV3">
                         <barButtonItem key="rightBarButtonItem" image="wave_list" id="nyb-sg-GiO">
                             <connections>
-                                <segue destination="DmP-7C-GRZ" kind="push" id="m9U-EJ-IJc"/>
+                                <segue destination="DmP-7C-GRZ" kind="show" id="m9U-EJ-IJc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

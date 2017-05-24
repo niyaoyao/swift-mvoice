@@ -41,11 +41,12 @@ final class NYRecorder: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate
         audioSession = AVAudioSession.sharedInstance()
         do {
             try audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
+            try audioSession.overrideOutputAudioPort(AVAudioSessionPortOverride.speaker)
             try audioSession.setActive(true)
             audioSession.requestRecordPermission({ (granted: Bool) in
                 DispatchQueue.main.async {
                     if granted {
-                        print("granted ok" + "\n") // clousure
+                        print("granted ok" + "\n") //  implement closure
                     } else {
                         print("granted false" + "\n")
                     }
@@ -77,7 +78,7 @@ final class NYRecorder: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate
                 print("Already Recording...")
             }
         } catch  {
-            // clousure
+            //  implement closure
             print(error)
         }
         
@@ -147,7 +148,7 @@ final class NYRecorder: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate
     
     // MARK: AVAudioPlayerDelegate
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-        
+        //  implement closure
     }
     
 }
