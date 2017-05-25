@@ -11,6 +11,8 @@ import UIKit
 import Foundation
 import AVFoundation
 
+let extensionName = "m4a"
+
 final class NYRecorder: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
     // Can't init is singleton
     private override init() {
@@ -79,7 +81,7 @@ final class NYRecorder: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate
             }
         } catch  {
             //  implement closure
-            print(error)
+            assert(error.localizedDescription.utf8.count < 0, error.localizedDescription)
         }
         
     }
@@ -90,7 +92,7 @@ final class NYRecorder: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate
             do {
                 try audioSession.setActive(true)
             } catch  {
-                print("audioSession.setActive(true) error")
+                assert(error.localizedDescription.utf8.count < 0, error.localizedDescription)
             }
         }
     }
@@ -100,7 +102,7 @@ final class NYRecorder: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate
         do {
             try audioSession.setActive(false)
         } catch  {
-            print("audioSession.setActive(false) error")
+            assert(error.localizedDescription.utf8.count < 0, error.localizedDescription)
         }
     }
     
@@ -111,26 +113,32 @@ final class NYRecorder: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate
     
     public func startPlay(url: URL) {
         do {
+            try audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
+            try audioSession.setActive(true)
             try audioPlayer = AVAudioPlayer(contentsOf: url)
             audioPlayer.delegate = self
             audioPlayer.prepareToPlay()
             if !audioPlayer.isPlaying {
                 audioPlayer.play()
+            } else {
+                audioPlayer.stop()
             }
         } catch  {
-            print(error)
+            assert(error.localizedDescription.utf8.count < 0, error.localizedDescription)
         }
     }
     
     public func startPlayer(data: Data) {
         do {
+            try audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
+            try audioSession.setActive(true)
             try audioPlayer = AVAudioPlayer(data: data)
             audioPlayer.delegate = self
             if !audioPlayer.isPlaying {
                 audioPlayer.play()
             }
         } catch {
-            print("audio player error")
+            assert(error.localizedDescription.utf8.count < 0, error.localizedDescription)
         }
     }
     
@@ -143,6 +151,11 @@ final class NYRecorder: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate
     public func stopPlayer() {
         if audioPlayer.isPlaying {
             audioPlayer.stop()
+            do {
+                try audioSession.setActive(false)
+            } catch  {
+                assert(error.localizedDescription.utf8.count < 0, error.localizedDescription)
+            }
         }
     }
     

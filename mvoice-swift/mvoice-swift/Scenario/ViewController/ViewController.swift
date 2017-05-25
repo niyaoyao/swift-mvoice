@@ -86,6 +86,7 @@ class ViewController: UIViewController {
     @IBAction func finishRecording(_ sender: Any) {
         NYRecorder.shared.finishRecording()
         showPlayButton()
+        AudioViewModel.shared.insertAudioData(fileName: NYRecorder.shared.filePathURL.lastPathComponent)
     }
     
     @IBAction func dragOutsideToCancelRecording(_ sender: Any) {

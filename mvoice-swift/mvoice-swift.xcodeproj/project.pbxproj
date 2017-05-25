@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E1B694D1ED68F550004FC11 /* AudioPlayerBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1B694C1ED68F550004FC11 /* AudioPlayerBoard.swift */; };
 		0E29CD2D1ECF52BA004671F8 /* mvoice_swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E29CD2C1ECF52BA004671F8 /* mvoice_swiftTests.swift */; };
 		0E29CD381ECF52BA004671F8 /* mvoice_swiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E29CD371ECF52BA004671F8 /* mvoice_swiftUITests.swift */; };
-		0E64E6E81ED465670003552D /* AudioListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E64E6E71ED465670003552D /* AudioListTableViewController.swift */; };
+		0E572ABE1ED6B978002E498F /* AudioPlayerBoard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E572ABD1ED6B978002E498F /* AudioPlayerBoard.xib */; };
 		0E6C99B41ED357A600843ABB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C99A91ED357A600843ABB /* AppDelegate.swift */; };
 		0E6C99B61ED357A700843ABB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E6C99AC1ED357A600843ABB /* Assets.xcassets */; };
 		0E6C99B81ED357A700843ABB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E6C99B01ED357A600843ABB /* LaunchScreen.storyboard */; };
@@ -22,7 +23,11 @@
 		0E6C99D71ED3E4D700843ABB /* NYRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C99D61ED3E4D700843ABB /* NYRecorder.swift */; };
 		0E6C99DB1ED3EA8B00843ABB /* NYFileSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C99DA1ED3EA8B00843ABB /* NYFileSupport.swift */; };
 		0E6C99DD1ED437AC00843ABB /* NYDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C99DC1ED437AC00843ABB /* NYDate.swift */; };
+		0E81EE771ED5D7F700EC1AF2 /* NYCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E81EE761ED5D7F700EC1AF2 /* NYCoreData.swift */; };
+		0E81EE7B1ED5E00100EC1AF2 /* AudioModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0E81EE791ED5E00100EC1AF2 /* AudioModel.xcdatamodeld */; };
 		0EBFD4781ED54A71002C7B74 /* AudioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBFD4771ED54A71002C7B74 /* AudioViewModel.swift */; };
+		0EE8E5741ED6A58600FD7376 /* AudioListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE8E5731ED6A58600FD7376 /* AudioListViewController.swift */; };
+		0EE8E5761ED6AEE200FD7376 /* AudioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE8E5751ED6AEE200FD7376 /* AudioTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E1B694C1ED68F550004FC11 /* AudioPlayerBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayerBoard.swift; sourceTree = "<group>"; };
 		0E29CD141ECF52BA004671F8 /* mvoice-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mvoice-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E29CD281ECF52BA004671F8 /* mvoice-swiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mvoice-swiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E29CD2C1ECF52BA004671F8 /* mvoice_swiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mvoice_swiftTests.swift; sourceTree = "<group>"; };
@@ -50,7 +56,7 @@
 		0E29CD331ECF52BA004671F8 /* mvoice-swiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mvoice-swiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E29CD371ECF52BA004671F8 /* mvoice_swiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mvoice_swiftUITests.swift; sourceTree = "<group>"; };
 		0E29CD391ECF52BA004671F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0E64E6E71ED465670003552D /* AudioListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioListTableViewController.swift; sourceTree = "<group>"; };
+		0E572ABD1ED6B978002E498F /* AudioPlayerBoard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AudioPlayerBoard.xib; sourceTree = "<group>"; };
 		0E6C99A91ED357A600843ABB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E6C99AA1ED357A600843ABB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E6C99AC1ED357A600843ABB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,7 +70,11 @@
 		0E6C99D61ED3E4D700843ABB /* NYRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NYRecorder.swift; sourceTree = "<group>"; };
 		0E6C99DA1ED3EA8B00843ABB /* NYFileSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NYFileSupport.swift; sourceTree = "<group>"; };
 		0E6C99DC1ED437AC00843ABB /* NYDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NYDate.swift; sourceTree = "<group>"; };
+		0E81EE761ED5D7F700EC1AF2 /* NYCoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NYCoreData.swift; sourceTree = "<group>"; };
+		0E81EE7A1ED5E00100EC1AF2 /* AudioModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AudioModel.xcdatamodel; sourceTree = "<group>"; };
 		0EBFD4771ED54A71002C7B74 /* AudioViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioViewModel.swift; sourceTree = "<group>"; };
+		0EE8E5731ED6A58600FD7376 /* AudioListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioListViewController.swift; sourceTree = "<group>"; };
+		0EE8E5751ED6AEE200FD7376 /* AudioTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +125,7 @@
 		0E29CD161ECF52BA004671F8 /* mvoice-swift */ = {
 			isa = PBXGroup;
 			children = (
+				0E81EE781ED5E00100EC1AF2 /* Database */,
 				0E6C99A71ED357A600843ABB /* Common */,
 				0E6C99A81ED357A600843ABB /* Main */,
 				0E6C99AB1ED357A600843ABB /* Resource */,
@@ -196,6 +207,7 @@
 				0E6C99C71ED3DCF000843ABB /* NYImage.swift */,
 				0E6C99DA1ED3EA8B00843ABB /* NYFileSupport.swift */,
 				0E6C99DC1ED437AC00843ABB /* NYDate.swift */,
+				0E81EE761ED5D7F700EC1AF2 /* NYCoreData.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -211,6 +223,9 @@
 		0E6C99CD1ED3E33700843ABB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0E1B694C1ED68F550004FC11 /* AudioPlayerBoard.swift */,
+				0EE8E5751ED6AEE200FD7376 /* AudioTableViewCell.swift */,
+				0E572ABD1ED6B978002E498F /* AudioPlayerBoard.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -219,7 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				0E6C99CF1ED3E33700843ABB /* ViewController.swift */,
-				0E64E6E71ED465670003552D /* AudioListTableViewController.swift */,
+				0EE8E5731ED6A58600FD7376 /* AudioListViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -230,6 +245,14 @@
 				0EBFD4771ED54A71002C7B74 /* AudioViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0E81EE781ED5E00100EC1AF2 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				0E81EE791ED5E00100EC1AF2 /* AudioModel.xcdatamodeld */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,6 +365,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E572ABE1ED6B978002E498F /* AudioPlayerBoard.xib in Resources */,
 				0E6C99B81ED357A700843ABB /* LaunchScreen.storyboard in Resources */,
 				0E6C99B61ED357A700843ABB /* Assets.xcassets in Resources */,
 				0E6C99B91ED357A700843ABB /* Main.storyboard in Resources */,
@@ -369,7 +393,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E64E6E81ED465670003552D /* AudioListTableViewController.swift in Sources */,
+				0E81EE771ED5D7F700EC1AF2 /* NYCoreData.swift in Sources */,
 				0E6C99D11ED3E33700843ABB /* ViewController.swift in Sources */,
 				0E6C99CA1ED3DCF000843ABB /* NYDevice.swift in Sources */,
 				0E6C99DB1ED3EA8B00843ABB /* NYFileSupport.swift in Sources */,
@@ -377,8 +401,12 @@
 				0E6C99DD1ED437AC00843ABB /* NYDate.swift in Sources */,
 				0E6C99CB1ED3DCF000843ABB /* NYImage.swift in Sources */,
 				0E6C99D71ED3E4D700843ABB /* NYRecorder.swift in Sources */,
+				0EE8E5761ED6AEE200FD7376 /* AudioTableViewCell.swift in Sources */,
+				0EE8E5741ED6A58600FD7376 /* AudioListViewController.swift in Sources */,
+				0E81EE7B1ED5E00100EC1AF2 /* AudioModel.xcdatamodeld in Sources */,
 				0E6C99C81ED3DCF000843ABB /* AppDelegateExtension.swift in Sources */,
 				0E6C99C91ED3DCF000843ABB /* NYColor.swift in Sources */,
+				0E1B694D1ED68F550004FC11 /* AudioPlayerBoard.swift in Sources */,
 				0E6C99B41ED357A600843ABB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -661,6 +689,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0E81EE791ED5E00100EC1AF2 /* AudioModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0E81EE7A1ED5E00100EC1AF2 /* AudioModel.xcdatamodel */,
+			);
+			currentVersion = 0E81EE7A1ED5E00100EC1AF2 /* AudioModel.xcdatamodel */;
+			path = AudioModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0E29CD0C1ECF52BA004671F8 /* Project object */;
 }
