@@ -28,6 +28,7 @@
 		0EBFD4781ED54A71002C7B74 /* AudioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBFD4771ED54A71002C7B74 /* AudioViewModel.swift */; };
 		0EE8E5741ED6A58600FD7376 /* AudioListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE8E5731ED6A58600FD7376 /* AudioListViewController.swift */; };
 		0EE8E5761ED6AEE200FD7376 /* AudioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE8E5751ED6AEE200FD7376 /* AudioTableViewCell.swift */; };
+		D6929E6623AB4E8FEC1340F9 /* Pods_mvoice_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C49544E7827A5CA4D619E99 /* Pods_mvoice_swift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		083A20C1048DD95DD1C6AE29 /* Pods-mvoice-swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mvoice-swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-mvoice-swift/Pods-mvoice-swift.release.xcconfig"; sourceTree = "<group>"; };
 		0E1B694C1ED68F550004FC11 /* AudioPlayerBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayerBoard.swift; sourceTree = "<group>"; };
 		0E29CD141ECF52BA004671F8 /* mvoice-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mvoice-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E29CD281ECF52BA004671F8 /* mvoice-swiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mvoice-swiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +77,8 @@
 		0EBFD4771ED54A71002C7B74 /* AudioViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioViewModel.swift; sourceTree = "<group>"; };
 		0EE8E5731ED6A58600FD7376 /* AudioListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioListViewController.swift; sourceTree = "<group>"; };
 		0EE8E5751ED6AEE200FD7376 /* AudioTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioTableViewCell.swift; sourceTree = "<group>"; };
+		4C49544E7827A5CA4D619E99 /* Pods_mvoice_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mvoice_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B7060DCBF24FF17019F4AEF /* Pods-mvoice-swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mvoice-swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mvoice-swift/Pods-mvoice-swift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6929E6623AB4E8FEC1340F9 /* Pods_mvoice_swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +114,8 @@
 				0E29CD2B1ECF52BA004671F8 /* mvoice-swiftTests */,
 				0E29CD361ECF52BA004671F8 /* mvoice-swiftUITests */,
 				0E29CD151ECF52BA004671F8 /* Products */,
+				81887704AB7CD0DB689280D2 /* Pods */,
+				9D41E73DDC16C22295F2D720 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -255,6 +262,23 @@
 			path = Database;
 			sourceTree = "<group>";
 		};
+		81887704AB7CD0DB689280D2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6B7060DCBF24FF17019F4AEF /* Pods-mvoice-swift.debug.xcconfig */,
+				083A20C1048DD95DD1C6AE29 /* Pods-mvoice-swift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9D41E73DDC16C22295F2D720 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C49544E7827A5CA4D619E99 /* Pods_mvoice_swift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -262,9 +286,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0E29CD3C1ECF52BA004671F8 /* Build configuration list for PBXNativeTarget "mvoice-swift" */;
 			buildPhases = (
+				65CFA966A30361BA69CA1D7B /* [CP] Check Pods Manifest.lock */,
 				0E29CD101ECF52BA004671F8 /* Sources */,
 				0E29CD111ECF52BA004671F8 /* Frameworks */,
 				0E29CD121ECF52BA004671F8 /* Resources */,
+				D8DA4381098DDA3674877413 /* [CP] Embed Pods Frameworks */,
+				383C75604DA3CFB61F339159 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -387,6 +414,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		383C75604DA3CFB61F339159 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mvoice-swift/Pods-mvoice-swift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65CFA966A30361BA69CA1D7B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D8DA4381098DDA3674877413 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mvoice-swift/Pods-mvoice-swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0E29CD101ECF52BA004671F8 /* Sources */ = {
@@ -559,6 +634,7 @@
 		};
 		0E29CD3D1ECF52BA004671F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B7060DCBF24FF17019F4AEF /* Pods-mvoice-swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P66P3CXU58;
@@ -576,6 +652,7 @@
 		};
 		0E29CD3E1ECF52BA004671F8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 083A20C1048DD95DD1C6AE29 /* Pods-mvoice-swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P66P3CXU58;
