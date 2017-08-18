@@ -13,6 +13,8 @@ class AudioListViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var audioListTableView: UITableView!
     @IBOutlet weak var audioPlayerBoard: AudioPlayerBoard!
     
+    var selectedIndex:Int = -1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print(AudioViewModel.shared.audioModels())
@@ -39,8 +41,8 @@ class AudioListViewController: UIViewController, UITableViewDataSource, UITableV
         let cell:AudioTableViewCell = tableView.dequeueReusableCell(withIdentifier: kAudioCellId) as! AudioTableViewCell
         let audio = AudioViewModel.shared.audioModels()[indexPath.row]
 
+        cell.isPlaying = selectedIndex == indexPath.row
         cell.update(audio: audio)
-        cell.isPlaying = audio.fileName == AudioViewModel.shared.playingAudio?.fileName
         return cell
     }
     // MARK: UITableViewDelegate
@@ -52,7 +54,9 @@ class AudioListViewController: UIViewController, UITableViewDataSource, UITableV
         let audio:AudioModel =  AudioViewModel.shared.audioModels()[indexPath.row]
         let url:URL = audio.filePathURL
         AudioViewModel.shared.playingAudio = audio
+        selectedIndex = indexPath.row
         tableView.reloadData()
         NYRecorder.shared.startPlay(url: url)
+        
     }
 }

@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var playButtonBottomLayoutConstraint: NSLayoutConstraint!
+    @IBOutlet weak var promotionLabel: UILabel!
    
     // timer label
     
@@ -39,6 +40,7 @@ class ViewController: UIViewController {
         recordButton.layer.cornerRadius = recordButton.frame.size.width/2.0
         playButton.layer.cornerRadius = playButton.frame.size.width/2.0
         hidePlayButton(animate: false)
+        promotionLabel.text = "Hold microphone button to start record"
     }
 
     private func showPlayButton() {
@@ -77,20 +79,24 @@ class ViewController: UIViewController {
         setPlayButton(isPlaying: false)
         hidePlayButton(animate: true)
         NYRecorder.shared.startRecord()
+        promotionLabel.text = "Recording..."
     }
     
     @IBAction func cancelRecording(_ sender: Any) {
         NYRecorder.shared.cancelRecording()
+        promotionLabel.text = "Cancel recording..."
     }
     
     @IBAction func finishRecording(_ sender: Any) {
         NYRecorder.shared.finishRecording()
         showPlayButton()
         AudioViewModel.shared.insertAudioData(fileName: NYRecorder.shared.filePathURL.lastPathComponent)
+        promotionLabel.text = "Wait for play"
     }
     
     @IBAction func dragOutsideToCancelRecording(_ sender: Any) {
         // Slide up not start
+        promotionLabel.text = "Cancel recording..."
     }
     
     // MARK: Play Action
@@ -99,9 +105,11 @@ class ViewController: UIViewController {
         if isPlaying {
             NYRecorder.shared.pausePlayer()
             isPlaying = false
+            promotionLabel.text = "Wait for play"
         } else {
             NYRecorder.shared.startPlayLastAudio()
             isPlaying = true
+            promotionLabel.text = "Playing..."
         }
         setPlayButton(isPlaying: isPlaying)
     }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12113" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yTt-Fz-yt6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12113" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yTt-Fz-yt6">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -49,13 +49,26 @@
                                     <action selector="startRecording:" destination="BYZ-38-t0r" eventType="touchDown" id="hnr-tY-TSf"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5W-aT-Vkt">
+                                <rect key="frame" x="16" y="120" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="mLV-ya-yV0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Q5W-aT-Vkt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CZg-Rb-oLi"/>
                             <constraint firstItem="cIP-DA-9EZ" firstAttribute="centerX" secondItem="Ma2-Hh-Xli" secondAttribute="centerX" id="EzY-Mi-Znr"/>
                             <constraint firstItem="Ma2-Hh-Xli" firstAttribute="top" secondItem="cIP-DA-9EZ" secondAttribute="bottom" constant="42" id="HPX-4c-lYm"/>
                             <constraint firstItem="Ma2-Hh-Xli" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ILP-gK-l7M"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ma2-Hh-Xli" secondAttribute="bottom" constant="65" id="e08-vc-JRk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Q5W-aT-Vkt" secondAttribute="trailing" id="ntJ-1W-xfT"/>
+                            <constraint firstItem="Q5W-aT-Vkt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="56" id="plW-tI-kGt"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Q5W-aT-Vkt" secondAttribute="leading" id="pwd-09-l4q"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Id9-Pb-LV3">
@@ -68,12 +81,13 @@
                     <connections>
                         <outlet property="playButton" destination="cIP-DA-9EZ" id="77Y-Cx-eFa"/>
                         <outlet property="playButtonBottomLayoutConstraint" destination="HPX-4c-lYm" id="lDr-9e-i42"/>
+                        <outlet property="promotionLabel" destination="Q5W-aT-Vkt" id="whU-Yx-B7f"/>
                         <outlet property="recordButton" destination="Ma2-Hh-Xli" id="cfv-DA-eyv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="727" y="168"/>
+            <point key="canvasLocation" x="725.60000000000002" y="167.76611694152925"/>
         </scene>
         <!--Audio List View Controller-->
         <scene sceneID="lcf-A8-Pcy">
@@ -151,7 +165,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VXi-VE-3dP" customClass="AudioPlayerBoard" customModule="mvoice_swift" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VXi-VE-3dP" customClass="AudioPlayerBoard" customModule="mvoice_swift" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="579" width="375" height="90"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ycB-Ml-od5">
