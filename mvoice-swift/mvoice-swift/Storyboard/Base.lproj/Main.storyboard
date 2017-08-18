@@ -183,9 +183,6 @@
                                             <constraint firstAttribute="width" constant="60" id="OVe-Vt-jF6"/>
                                         </constraints>
                                         <state key="normal" image="play"/>
-                                        <connections>
-                                            <action selector="playAudio:" destination="VXi-VE-3dP" eventType="touchUpInside" id="2xI-sd-aiU"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HWd-Bh-4BL">
                                         <rect key="frame" x="97" y="20" width="40" height="40"/>
@@ -195,9 +192,6 @@
                                             <constraint firstAttribute="height" constant="40" id="t24-r9-Ld7"/>
                                         </constraints>
                                         <state key="normal" image="previous"/>
-                                        <connections>
-                                            <action selector="playPrevious:" destination="VXi-VE-3dP" eventType="touchUpInside" id="5Di-e6-0bG"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bh-ow-SXz">
                                         <rect key="frame" x="237" y="20" width="40" height="40"/>
@@ -207,9 +201,6 @@
                                             <constraint firstAttribute="height" constant="40" id="iqa-t4-sF1"/>
                                         </constraints>
                                         <state key="normal" image="next"/>
-                                        <connections>
-                                            <action selector="playNext:" destination="VXi-VE-3dP" eventType="touchUpInside" id="AqS-s7-sIh"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>

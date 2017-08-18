@@ -9,27 +9,15 @@
 import UIKit
 
 @IBDesignable class AudioPlayerBoard: UIView {
-    @IBOutlet private var previousButton:UIButton!
-    @IBOutlet private var nextButton:UIButton!
+    @IBOutlet weak var previousButton:UIButton!
+    @IBOutlet weak var nextButton:UIButton!
     @IBOutlet weak var playButton: UIButton!
-    @IBOutlet weak var backgroundView: UIView!
+    @IBOutlet private weak var backgroundView: UIView!
 
     override func awakeFromNib() {
         setupUI()
     }
     
-    // MARK: Button Action
-    @IBAction func playAudio(_ sender: Any) {
-        
-    }
- 
-    @IBAction func playPrevious(_ sender: Any) {
-        
-    }
- 
-    @IBAction func playNext(_ sender: Any) {
-        
-    }
     
     // MARK: Private Method
     private func setupUI() {
@@ -37,6 +25,11 @@ import UIKit
         previousButton.layer.cornerRadius = previousButton.frame.size.width/2.0
         nextButton.layer.cornerRadius = nextButton.frame.size.width/2.0
         playButton.layer.cornerRadius = playButton.frame.size.width/2.0
+        setupBackground()
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
         setupBackground()
     }
     

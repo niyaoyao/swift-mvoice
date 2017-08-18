@@ -19,6 +19,16 @@ class AudioListViewController: UIViewController, UITableViewDataSource, UITableV
         super.viewDidLoad()
         print(AudioViewModel.shared.audioModels())
         setupUI()
+        audioPlayerBoard.playButton.addTarget(self,
+                                              action: #selector(startPlaying),
+                                              for: UIControlEvents.touchUpInside)
+        audioPlayerBoard.previousButton.addTarget(self,
+                                                  action: #selector(previousVoice),
+                                                  for: UIControlEvents.touchUpInside)
+        audioPlayerBoard.nextButton.addTarget(self,
+                                              action: #selector(nextVoice),
+                                              for: UIControlEvents.touchUpInside)
+        
     }
 
     private func setupUI()  {
@@ -51,12 +61,54 @@ class AudioListViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let audio:AudioModel =  AudioViewModel.shared.audioModels()[indexPath.row]
-        let url:URL = audio.filePathURL
-        AudioViewModel.shared.playingAudio = audio
         selectedIndex = indexPath.row
         tableView.reloadData()
+        playAudio(index: selectedIndex)
+    }
+    
+    // MARK: Audio
+    func playAudio(index: Int) {
+        let audio:AudioModel =  AudioViewModel.shared.audioModels()[index]
+        let url:URL = audio.filePathURL
+        AudioViewModel.shared.playingAudio = audio
         NYRecorder.shared.startPlay(url: url)
+    }
+
+    func refreshUI(playIndex: Int) {
+        selectedIndex = playIndex
+        audioListTableView.reloadData()
+    }
+    
+    // MARK: Button Action
+    func startPlaying() {
+        var playIndex = 0
+        if selectedIndex >= 0 && selectedIndex < AudioViewModel.shared.audioModels().count {
+            playIndex = selectedIndex
+        }
+        refreshUI(playIndex: playIndex)
+        playAudio(index: playIndex)
+    }
+    
+    func previousVoice() {
+        var playIndex = 0
+        let total = AudioViewModel.shared.audioModels().count
         
+        if selectedIndex >= 1 && selectedIndex < total {
+            playIndex = selectedIndex - 1
+        } else {
+            playIndex = total - 1
+        }
+        refreshUI(playIndex: playIndex)
+        playAudio(index: playIndex)
+    }
+    
+    func nextVoice() {
+        var playIndex = 0
+        let total = AudioViewModel.shared.audioModels().count
+        if selectedIndex >= -1 && selectedIndex <= total - 2 {
+            playIndex = selectedIndex + 1
+        }
+        refreshUI(playIndex: playIndex)
+        playAudio(index: playIndex )
     }
 }
