@@ -68,10 +68,28 @@ class AudioListViewController: UIViewController, UITableViewDataSource, UITableV
     
     // MARK: Audio
     func playAudio(index: Int) {
-        let audio:AudioModel =  AudioViewModel.shared.audioModels()[index]
-        let url:URL = audio.filePathURL
-        AudioViewModel.shared.playingAudio = audio
-        NYRecorder.shared.startPlay(url: url)
+        if AudioViewModel.shared.audioModels().count >= index + 1 && index >= 0 {
+            let audio:AudioModel =  AudioViewModel.shared.audioModels()[index]
+            let url:URL = audio.filePathURL
+            AudioViewModel.shared.playingAudio = audio
+            NYRecorder.shared.startPlay(url: url)
+        } else {
+            if AudioViewModel.shared.audioModels().count <= 0 {
+                let alertController = UIAlertController(title: "This world is silent", message: "There is no voice to hear", preferredStyle: .alert)
+                
+                let  deleteButton = UIAlertAction(title: "OK", style: .destructive, handler: nil)
+                alertController.addAction(deleteButton)
+                
+                navigationController?.present(alertController, animated: true, completion: nil)
+                
+            } else {
+                let alertController = UIAlertController(title: "Oops!", message: "Count: \(AudioViewModel.shared.audioModels().count) \n Index: \(index)", preferredStyle: .alert)
+                
+                let  deleteButton = UIAlertAction(title: "OK", style: .destructive, handler: nil)
+                alertController.addAction(deleteButton)
+                navigationController?.present(alertController, animated: true, completion: nil)
+            }
+        }
     }
 
     func refreshUI(playIndex: Int) {
