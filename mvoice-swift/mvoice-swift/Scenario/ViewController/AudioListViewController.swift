@@ -19,7 +19,6 @@ class AudioListViewController: UIViewController, UITableViewDataSource, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(AudioViewModel.shared.audioModels())
         setupUI()
         audioPlayerBoard.playButton.addTarget(self,
                                               action: #selector(startPlaying),

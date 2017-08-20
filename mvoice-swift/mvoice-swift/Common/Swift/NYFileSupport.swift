@@ -11,7 +11,6 @@ import Foundation
 extension FileManager {
     class func fileDocPathURL(fileName: String, extensionName: String) -> URL {
         let url = docPathURL().appendingPathComponent(fileName+"."+extensionName)
-        print(url)
         return url
     }
     
@@ -28,7 +27,6 @@ extension FileManager {
             for file:String in contents {
                 if URL(string:file)?.pathExtension.lowercased() == extensionName {
                     filePaths.append(file)
-                    print(file + "\n")
                 }
             }
         } catch  {

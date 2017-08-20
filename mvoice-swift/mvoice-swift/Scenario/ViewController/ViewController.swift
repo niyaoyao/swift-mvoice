@@ -18,8 +18,29 @@ class ViewController: UIViewController {
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var playButtonBottomLayoutConstraint: NSLayoutConstraint!
     @IBOutlet weak var promotionLabel: UILabel!
-   
-    // timer label
+    
+    // MARK: Timer
+    var timer: DispatchSourceTimer?
+    var seconds: Int = 0
+    
+    private func startTimer() {
+        let queue = DispatchQueue(label: "that.boring.bear.mvoice.timer.queue", attributes: .concurrent)
+        timer?.cancel()
+        timer = DispatchSource.makeTimerSource(queue: queue)
+        timer?.scheduleRepeating(deadline: .now(), interval: .seconds(1), leeway: .seconds(0))
+        timer?.setEventHandler { [weak self] in
+            self!.seconds += 1
+            DispatchQueue.main.async(execute: {
+                self?.promotionLabel.text = "Recording \(String(describing: self!.seconds))s..."
+            })
+        }
+        timer?.resume()
+    }
+    
+    private func stopTimer() {
+        timer?.cancel()
+        timer = nil
+    }
     
     var isPlaying:Bool = false
     
@@ -28,7 +49,7 @@ class ViewController: UIViewController {
         setupUI()
         NYRecorder.shared.setupRecorder()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -76,6 +97,7 @@ class ViewController: UIViewController {
     
     // MARK: Record Action
     @IBAction func startRecording(_ sender: Any) {
+        startTimer()
         setPlayButton(isPlaying: false)
         hidePlayButton(animate: true)
         NYRecorder.shared.startRecord()
@@ -88,10 +110,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func finishRecording(_ sender: Any) {
-        NYRecorder.shared.finishRecording()
-        showPlayButton()
-        AudioViewModel.shared.insertAudioData(fileName: NYRecorder.shared.filePathURL.lastPathComponent)
-        promotionLabel.text = "Wait for play"
+        stopTimer()
+        if seconds > 3 {
+            NYRecorder.shared.finishRecording()
+            showPlayButton()
+            AudioViewModel.shared.insertAudioData(fileName: NYRecorder.shared.filePathURL.lastPathComponent)
+            promotionLabel.text = "Wait for play"
+        } else {
+            promotionLabel.text = "The voice is too short to save"
+        }
     }
     
     @IBAction func dragOutsideToCancelRecording(_ sender: Any) {
