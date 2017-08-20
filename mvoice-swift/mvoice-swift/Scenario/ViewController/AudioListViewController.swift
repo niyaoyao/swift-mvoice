@@ -12,6 +12,8 @@ class AudioListViewController: UIViewController, UITableViewDataSource, UITableV
     
     @IBOutlet weak var audioListTableView: UITableView!
     @IBOutlet weak var audioPlayerBoard: AudioPlayerBoard!
+    var audioNameLabel: UILabel!
+    
     
     var selectedIndex:Int = -1
     
@@ -30,16 +32,31 @@ class AudioListViewController: UIViewController, UITableViewDataSource, UITableV
                                               for: UIControlEvents.touchUpInside)
         
     }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        audioPlayerBoard.bringSubview(toFront: audioNameLabel)
+    }
 
     private func setupUI()  {
         navigationItem.title = "i·Listen"
         setupTableView()
+        let margin: CGFloat = 15.0
+        let margin_small: CGFloat = 5
+        let height: CGFloat = 20
+        let y: CGFloat = 90 - margin_small - height
+        let width = UIScreen.main.bounds.size.width - 2 * margin
+        let frame:CGRect = CGRect(x: margin, y: y, width: width, height: height)
+        audioNameLabel = UILabel(frame: frame)
+        audioNameLabel.font = UIFont.systemFont(ofSize: 13)
+        audioNameLabel.textColor = UIColor.alphaValue(hex: 0xffffff, alpha: 1)
+        audioNameLabel.textAlignment = NSTextAlignment.center
+        audioPlayerBoard.addSubview(audioNameLabel)
     }
     
     private func setupTableView() {
         audioListTableView.delegate = self
         audioListTableView.dataSource = self
-    
     }
     
     // MARK: UITableViewDataSource
@@ -73,6 +90,7 @@ class AudioListViewController: UIViewController, UITableViewDataSource, UITableV
             let url:URL = audio.filePathURL
             AudioViewModel.shared.playingAudio = audio
             NYRecorder.shared.startPlay(url: url)
+            audioNameLabel.text = "Voice: \(audio.fileName!)"
         } else {
             if AudioViewModel.shared.audioModels().count <= 0 {
                 let alertController = UIAlertController(title: "This world is silent", message: "There is no voice to hear", preferredStyle: .alert)
@@ -89,12 +107,15 @@ class AudioListViewController: UIViewController, UITableViewDataSource, UITableV
                 alertController.addAction(deleteButton)
                 navigationController?.present(alertController, animated: true, completion: nil)
             }
+            audioNameLabel.text = "This world is silent"
         }
     }
 
     func refreshUI(playIndex: Int) {
         selectedIndex = playIndex
         audioListTableView.reloadData()
+        let indexPath: IndexPath = IndexPath(row: playIndex, section: 0)
+        audioListTableView.scrollToRow(at: indexPath, at: UITableViewScrollPosition.middle, animated: true)
     }
     
     // MARK: Button Action
