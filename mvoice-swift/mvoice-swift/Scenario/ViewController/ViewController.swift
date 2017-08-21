@@ -40,6 +40,7 @@ class ViewController: UIViewController {
     private func stopTimer() {
         timer?.cancel()
         timer = nil
+        seconds = 0
     }
     
     var isPlaying:Bool = false
@@ -106,6 +107,7 @@ class ViewController: UIViewController {
     
     @IBAction func cancelRecording(_ sender: Any) {
         NYRecorder.shared.cancelRecording()
+        stopTimer()
         promotionLabel.text = "Cancel recording..."
     }
     
