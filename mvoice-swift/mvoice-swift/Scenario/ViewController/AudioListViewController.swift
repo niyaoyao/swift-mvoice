@@ -84,6 +84,7 @@ class AudioListViewController: UIViewController, UITableViewDataSource, UITableV
     
     // MARK: Audio
     func playAudio(index: Int) {
+        refreshUI(playIndex: index)
         if AudioViewModel.shared.audioModels().count >= index + 1 && index >= 0 {
             let audio:AudioModel =  AudioViewModel.shared.audioModels()[index]
             let url:URL = audio.filePathURL
@@ -112,9 +113,11 @@ class AudioListViewController: UIViewController, UITableViewDataSource, UITableV
 
     func refreshUI(playIndex: Int) {
         selectedIndex = playIndex
-        audioListTableView.reloadData()
-        let indexPath: IndexPath = IndexPath(row: playIndex, section: 0)
-        audioListTableView.scrollToRow(at: indexPath, at: UITableViewScrollPosition.middle, animated: true)
+        if selectedIndex < AudioViewModel.shared.audioModels().count && selectedIndex >= 0 {
+            audioListTableView.reloadData()
+            let indexPath: IndexPath = IndexPath(row: playIndex, section: 0)
+            audioListTableView.scrollToRow(at: indexPath, at: UITableViewScrollPosition.middle, animated: true)
+        }
     }
     
     // MARK: Button Action
@@ -123,7 +126,6 @@ class AudioListViewController: UIViewController, UITableViewDataSource, UITableV
         if selectedIndex >= 0 && selectedIndex < AudioViewModel.shared.audioModels().count {
             playIndex = selectedIndex
         }
-        refreshUI(playIndex: playIndex)
         playAudio(index: playIndex)
     }
     
@@ -136,7 +138,6 @@ class AudioListViewController: UIViewController, UITableViewDataSource, UITableV
         } else {
             playIndex = total - 1
         }
-        refreshUI(playIndex: playIndex)
         playAudio(index: playIndex)
     }
     
@@ -146,7 +147,6 @@ class AudioListViewController: UIViewController, UITableViewDataSource, UITableV
         if selectedIndex >= -1 && selectedIndex <= total - 2 {
             playIndex = selectedIndex + 1
         }
-        refreshUI(playIndex: playIndex)
         playAudio(index: playIndex )
     }
 }

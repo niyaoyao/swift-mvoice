@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     var seconds: Int = 0
     
     private func startTimer() {
+        seconds = 0
         let queue = DispatchQueue(label: "that.boring.bear.mvoice.timer.queue", attributes: .concurrent)
         timer?.cancel()
         timer = DispatchSource.makeTimerSource(queue: queue)
@@ -40,7 +41,6 @@ class ViewController: UIViewController {
     private func stopTimer() {
         timer?.cancel()
         timer = nil
-        seconds = 0
     }
     
     var isPlaying:Bool = false
@@ -62,7 +62,7 @@ class ViewController: UIViewController {
         recordButton.layer.cornerRadius = recordButton.frame.size.width/2.0
         playButton.layer.cornerRadius = playButton.frame.size.width/2.0
         hidePlayButton(animate: false)
-        promotionLabel.text = "Hold microphone button to start record"
+        promotionLabel.text = "Hold microphone button to restart"
     }
 
     private func showPlayButton() {
@@ -102,13 +102,13 @@ class ViewController: UIViewController {
         setPlayButton(isPlaying: false)
         hidePlayButton(animate: true)
         NYRecorder.shared.startRecord()
-        promotionLabel.text = "Recording..."
+        promotionLabel.text = "Recording Voice..."
     }
     
     @IBAction func cancelRecording(_ sender: Any) {
         NYRecorder.shared.cancelRecording()
         stopTimer()
-        promotionLabel.text = "Cancel recording..."
+        promotionLabel.text = "Canceled...\nHold microphone button again to restart.."
     }
     
     @IBAction func finishRecording(_ sender: Any) {
@@ -125,7 +125,7 @@ class ViewController: UIViewController {
     
     @IBAction func dragOutsideToCancelRecording(_ sender: Any) {
         // Slide up not start
-        promotionLabel.text = "Cancel recording..."
+        promotionLabel.text = "Release Button To Cancel..."
     }
     
     // MARK: Play Action
